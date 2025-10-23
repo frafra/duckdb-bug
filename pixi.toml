@@ -1,0 +1,16 @@
+[workspace]
+authors = ["Francesco Frassinelli <francesco.frassinelli@nina.no>"]
+channels = ["conda-forge"]
+name = "duckdb-bug"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+gcc = "*"
+gxx = "*"
+cmake = "*"
+ninja = "*"
+python = "*"
+git = "*"
