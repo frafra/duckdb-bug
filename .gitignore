@@ -1,0 +1,6 @@
+duckdb/
+test/current.csv
+
+# pixi environments
+.pixi/*
+!.pixi/config.toml
