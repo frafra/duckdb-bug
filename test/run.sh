@@ -12,6 +12,13 @@ else
   export BUILD_EXTENSIONS="fts"
 fi
 
+# fix untestable commits belonging to https://github.com/duckdb/duckdb/pull/17459
+if git merge-base --is-ancestor HEAD a6ce5af2ab4b4b7739251bfe149e55e09331d041 && \
+    git merge-base --is-ancestor a8a377580cc5d26ae90f16b41affad24ac6ee833 HEAD
+then
+  git cherry-pick --no-commit a6ce5af2ab4b4b7739251bfe149e55e09331d041
+fi
+
 make clean
 
 TARGET=debug
